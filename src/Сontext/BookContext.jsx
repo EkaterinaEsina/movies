@@ -2,7 +2,7 @@ import React, { createContext, useState } from 'react';
 
 export const CustomContext = createContext();
 
-export const Context = (props) => {
+export const BookContext = (props) => {
   const [books, setBooks] = useState([
     {id: 'a1', name: 'JS basics'},
     {id: 'a2', name: 'JS advanced'},

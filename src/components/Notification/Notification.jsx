@@ -1,18 +1,25 @@
-import { useEffect } from 'react';
+import { useEffect, useContext } from 'react';
+import { ShopContext } from '../../Сontext/ShopContext';
 
-export const Notification = ({ content, onClose = () => null }) => {
+export const Notification = () => {
+  const { notificationContent, closeNotification } = useContext(ShopContext);
+
   useEffect(() => {
-    const timerId = setTimeout(onClose, 3000);
+    const timerId = setTimeout(closeNotification, 3000);
 
     return () => {
       clearTimeout(timerId);
     };
-  }, [content, onClose]);
+  }, [notificationContent, closeNotification]);
+
+  if (!notificationContent) {
+    return null;
+  }
 
   return (
     <div id="toast-container">
       <div className="toast">
-        {content}
+        {notificationContent}
       </div>
     </div>
   );

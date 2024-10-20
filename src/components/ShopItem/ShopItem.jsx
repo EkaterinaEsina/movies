@@ -1,4 +1,8 @@
-export const ShopItem = ({ item, handleSetItemToOrder = () => null }) => {
+import { useContext } from 'react';
+
+import { ShopContext } from '../../Сontext/ShopContext';
+
+export const ShopItem = ({ item }) => {
   const { 
     id, 
     name,
@@ -6,6 +10,8 @@ export const ShopItem = ({ item, handleSetItemToOrder = () => null }) => {
     price,
     full_background
   } = item;
+
+  const { setItemToOrder } = useContext(ShopContext);
 
   const defaultPosterSrc = !full_background 
     ? `https://via.placeholder.com/300x250?text=${name}`
@@ -25,7 +31,7 @@ export const ShopItem = ({ item, handleSetItemToOrder = () => null }) => {
       <div className="card-action">
         <button
           className="btn"
-          onClick={() => handleSetItemToOrder({id, name, price, description})}
+          onClick={() => setItemToOrder({ id, name, price, description })}
         >
           Купить
         </button>

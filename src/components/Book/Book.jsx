@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CustomContext } from "../../Context";
+import { CustomContext } from "../../Сontext/BookContext";
 
 export const Book = (props) => {
   const { name, publishYear, price, children } = props;
