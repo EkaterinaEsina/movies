@@ -4,7 +4,7 @@ import { Movie } from "../../components/Movie";
 import { Preloader } from "../../components/Preloader";
 import { Search } from "../../components/Search";
 
-const apiKey = process.env.REACT_APP_API_KEY;
+const apiKey = process.env.REACT_APP_API_KEY_MOVIES;
 
 export const Movies = (props) => {
   const [movies, setMovies] = useState([]);
@@ -23,7 +23,10 @@ export const Movies = (props) => {
         setMovies(data.Search || []);
         setLoading(false);
       })
-      .catch(err => console.error(err));
+      .catch(err => {
+        console.error(err);
+        setLoading(false);
+      });
   }
 
   return (

@@ -1,14 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export const Search = (props) => {
   const { handleSearch } = props;
 
   const [searchValue, setSearchValue] = useState('Matrix');
   const [searchType, setSearchType] = useState('all');
-
-  useEffect(() => {
-    handleSearch(searchValue, searchType);
-  }, [searchType])
 
   const handleSearchChange = (event) => {
     setSearchValue(event.target.value);
@@ -22,6 +18,8 @@ export const Search = (props) => {
 
   const handleSearchTypeChange = (event) => {
     setSearchType(event.target.dataset.type);
+
+    handleSearch(searchValue, event.target.dataset.type);
   }
 
   return (

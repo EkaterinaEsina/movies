@@ -1,13 +1,16 @@
 import React from 'react';
 
-import { Posts } from './containers/Posts';
 import { Book } from './components/Book';
+import { Counter } from './components/Counter';
 import { Form } from './components/Form';
 import { FormWithRef } from './components/FormWithRef';
+import { Posts } from './containers/Posts';
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { Main } from './components/Main';
+import { Timer } from './components/Timer';
 import { Movies } from './containers/Movies';
+import { Shop } from './containers/Shop';
 import { SubscriptionForm } from './components/SubscriptionForm';
 import { UncontrolledForm } from './components/UncontrolledForm';
 import { Context } from './Context';
@@ -101,10 +104,14 @@ class App extends React.Component {
     return (
       <Context>
         <div className="App">
-          <Header />
+          {/* <Header title="Movies" /> */}
+          <Header title="Shop" />
 
           <Main>
-            <Movies />
+            {/* <Movies /> */}
+            {/* <Counter /> */}
+            {/* <Timer /> */}
+            <Shop />
           </Main>
           
           {/* <UncontrolledForm />
