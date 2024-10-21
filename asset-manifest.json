@@ -1,15 +1,29 @@
 {
   "files": {
-    "main.css": "/movies/static/css/main.bd1d5937.css",
-    "main.js": "/movies/static/js/main.44be2bf9.js",
+    "main.css": "/movies/static/css/main.cf647265.css",
+    "main.js": "/movies/static/js/main.8278b18b.js",
+    "static/js/648.dfcd06bc.chunk.js": "/movies/static/js/648.dfcd06bc.chunk.js",
+    "static/js/742.cac943e7.chunk.js": "/movies/static/js/742.cac943e7.chunk.js",
+    "static/js/774.6b139e77.chunk.js": "/movies/static/js/774.6b139e77.chunk.js",
+    "static/js/393.c6e769de.chunk.js": "/movies/static/js/393.c6e769de.chunk.js",
+    "static/js/934.5b8ffa5d.chunk.js": "/movies/static/js/934.5b8ffa5d.chunk.js",
+    "static/js/550.fcf89a03.chunk.js": "/movies/static/js/550.fcf89a03.chunk.js",
+    "static/js/397.ba489b60.chunk.js": "/movies/static/js/397.ba489b60.chunk.js",
     "static/js/453.54a6b3c1.chunk.js": "/movies/static/js/453.54a6b3c1.chunk.js",
     "index.html": "/movies/index.html",
-    "main.bd1d5937.css.map": "/movies/static/css/main.bd1d5937.css.map",
-    "main.44be2bf9.js.map": "/movies/static/js/main.44be2bf9.js.map",
+    "main.cf647265.css.map": "/movies/static/css/main.cf647265.css.map",
+    "main.8278b18b.js.map": "/movies/static/js/main.8278b18b.js.map",
+    "648.dfcd06bc.chunk.js.map": "/movies/static/js/648.dfcd06bc.chunk.js.map",
+    "742.cac943e7.chunk.js.map": "/movies/static/js/742.cac943e7.chunk.js.map",
+    "774.6b139e77.chunk.js.map": "/movies/static/js/774.6b139e77.chunk.js.map",
+    "393.c6e769de.chunk.js.map": "/movies/static/js/393.c6e769de.chunk.js.map",
+    "934.5b8ffa5d.chunk.js.map": "/movies/static/js/934.5b8ffa5d.chunk.js.map",
+    "550.fcf89a03.chunk.js.map": "/movies/static/js/550.fcf89a03.chunk.js.map",
+    "397.ba489b60.chunk.js.map": "/movies/static/js/397.ba489b60.chunk.js.map",
     "453.54a6b3c1.chunk.js.map": "/movies/static/js/453.54a6b3c1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd1d5937.css",
-    "static/js/main.44be2bf9.js"
+    "static/css/main.cf647265.css",
+    "static/js/main.8278b18b.js"
   ]
 }
