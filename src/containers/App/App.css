@@ -2,10 +2,6 @@
   text-align: center;
 }
 
-.App_classComponent {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -136,6 +132,18 @@
 #toast-container {
   bottom: 4rem !important;
   animation: fade-in 250ms ease-in-out;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.video-recipe {
+  max-width: 100%;
+  width: 600px;
+  height: 350px;
 }
 
 @keyframes opened {

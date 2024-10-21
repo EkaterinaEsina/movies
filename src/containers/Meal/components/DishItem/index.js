@@ -1,0 +1,1 @@
+export { DishItem } from './DishItem';

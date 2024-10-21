@@ -1,1 +1,1 @@
-export { Movies } from './Movies';
+export { route } from './route';

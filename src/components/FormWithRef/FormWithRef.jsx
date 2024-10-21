@@ -27,7 +27,6 @@ class FormWithRef extends React.Component {
     this.setState(
       { [event.target.name]: event.target.value },
       () => {
-        debugger;
         if (this.state.firstName.length === 16) {
           this.emailRef.current.focus();
         }
@@ -80,8 +79,6 @@ class FormWithRef extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.firstNameRef);
-    debugger;
     this.firstNameRef.current.focus();
   }
 

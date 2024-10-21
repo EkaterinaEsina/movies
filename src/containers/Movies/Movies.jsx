@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 
+import { Layout } from "../../components/Layout";
 import { Movie } from "../../components/Movie";
 import { Preloader } from "../../components/Preloader";
 import { Search } from "../../components/Search";
 
 const apiKey = process.env.REACT_APP_API_KEY_MOVIES;
 
-export const Movies = (props) => {
+const Movies = (props) => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -30,7 +31,7 @@ export const Movies = (props) => {
   }
 
   return (
-    <>
+    <Layout title="Movies">
       <Search handleSearch={handleSearch} />
 
       {loading 
@@ -41,6 +42,8 @@ export const Movies = (props) => {
           </div>
           : <>Nothing founded</>
       }
-    </>
+    </Layout>
   )
-}
+};
+
+export default Movies;

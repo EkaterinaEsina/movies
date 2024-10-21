@@ -95,7 +95,6 @@ export const shopReducer = (state, { type, payload }) => {
     }
 
     case 'INCREASE_ITEM_COUNT': {
-      debugger;
       const newOrder = state.order.map((orderItem) => {
         const item = state.order.find((orderItem) => orderItem.id === payload);
   
@@ -113,7 +112,6 @@ export const shopReducer = (state, { type, payload }) => {
     }
 
     case 'DECREASE_ITEM_COUNT': {
-      debugger;
       const newOrder = state.order.map((orderItem) => {
         const item = state.order.find((orderItem) => orderItem.id === payload);
   

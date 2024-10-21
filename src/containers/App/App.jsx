@@ -1,20 +1,18 @@
 import React from 'react';
+import { RouterProvider } from 'react-router-dom';
 
 // import { Book } from './components/Book';
 // import { Counter } from './components/Counter';
 // import { Form } from './components/Form';
 // import { FormWithRef } from './components/FormWithRef';
 // import { Posts } from './containers/Posts';
-import { Footer } from './components/Footer';
-import { Header } from './components/Header';
-import { Main } from './components/Main';
 // import { Timer } from './components/Timer';
 // import { Movies } from './containers/Movies';
-import { Shop } from './containers/Shop';
+// import { Shop } from './containers/Shop';
 // import { SubscriptionForm } from './components/SubscriptionForm';
 // import { UncontrolledForm } from './components/UncontrolledForm';
-import { ShopContextProvider } from './Сontext/ShopContext';
-import { BookContext } from './Сontext/BookContext';
+
+import { router } from './router';
 
 import './App.css';
 
@@ -84,76 +82,8 @@ class App extends React.Component {
     clearInterval(this.timerId);
   }
 
-  addPost = () => {
-    this.setState({
-      posts: [...this.state.posts, { 
-        "userId": 1,
-        "id": Math.random(),
-        "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
-        "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
-      }]
-    })
-  }
-
-  removePost = (id) => {
-    this.setState({
-      posts: [...this.state.posts.filter(post => post.id !== id)]
-    })
-  }
-
   render() {
-    return (
-      <BookContext>
-        <div className="App">
-          {/* <Header title="Movies" /> */}
-          <Header title="Shop" />
-
-          <Main>
-            {/* <Movies /> */}
-            {/* <Counter /> */}
-            {/* <Timer /> */}
-            <ShopContextProvider>
-              <Shop />
-            </ShopContextProvider>
-          </Main>
-          
-          {/* <UncontrolledForm />
-
-          <br />
-
-          <FormWithRef />
-
-          <br />
-
-          <SubscriptionForm />
-
-          <br />
-
-          <Form />
-
-          <br />
-
-          <Book />
-
-          <br />
-
-          <h3>Timer</h3>
-          <h4>{this.state.count}</h4>
-          {
-            !this.state.isCounting 
-              ? <button onClick={this.startTimer}>Start</button>
-              : <button onClick={this.pauseTimer}>Pause</button>
-          }
-          <button onClick={this.resetTimer}>Reset</button>
-
-          <br />
-
-          <Posts posts={this.state.posts} addPost={this.addPost} removePost={this.removePost} /> */}
-
-          <Footer />
-        </div>
-      </BookContext>
-    );
+    return <RouterProvider router={router} />;
   };
 }
 

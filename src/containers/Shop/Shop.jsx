@@ -2,6 +2,7 @@ import React, { useEffect, useContext } from 'react';
 
 import { Cart } from '../../components/Cart';
 import { CartList } from '../../components/CartList';
+import { Layout } from '../../components/Layout';
 import { Notification } from '../../components/Notification';
 
 import { ShopList } from './components/ShopList';
@@ -11,7 +12,7 @@ import { ShopContext } from '../../Сontext/ShopContext';
 
 const apiKey = process.env.REACT_APP_API_KEY_SHOP;
 
-export const Shop = (props) => {
+const Shop = (props) => {
   const { setIsItemsLoading, resetIsItemsLoading, setItems } = useContext(ShopContext);
 
   useEffect(() => {
@@ -34,14 +35,18 @@ export const Shop = (props) => {
   };
 
   return (
-    <div className="container content">
-      <Cart />
+    <Layout title="Shop">
+      <div className="container content">
+        <Cart />
 
-      <CartList />
+        <CartList />
 
-      <ShopList />
+        <ShopList />
 
-      <Notification />
-    </div>
+        <Notification />
+      </div>
+    </Layout>
   );
 };
+
+export default Shop;
